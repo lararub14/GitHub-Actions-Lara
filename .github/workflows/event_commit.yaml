@@ -2,18 +2,20 @@ name: Event PR - Single Job
 
 on:
   pull_request:
-   labels:
-    - "test"
-
+    labels: 
+      - 'test'
+           
 jobs:
+  steps:
+    steps:
+      - name: Checkout Code 
+        uses: actions/checkout@v4
   hello_world:
     runs-on: ubuntu-latest
     
     steps:
       - name: First Step 
         run: echo "Hello World!"
-      - name: Step 2
-        run: echo "Hello Worls 2!"
 
      
     
