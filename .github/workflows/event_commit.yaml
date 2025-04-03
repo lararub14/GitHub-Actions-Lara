@@ -2,6 +2,8 @@ name: Event PR - Single Job
 
 on:
   pull_request:
+   labels:
+    - "test"
 
 jobs:
   hello_world:
