@@ -4,8 +4,10 @@ import sys
 # Importar la función calculadora
 from main import calculadora
 
+
 def simulate_input(inputs):
     return StringIO("\n".join(map(str, inputs)) + "\n")
+
 
 class TestCalculadora(unittest.TestCase):
 
@@ -43,6 +45,7 @@ class TestCalculadora(unittest.TestCase):
         calculadora()
         output = sys.stdout.getvalue().strip()
         self.assertIn("Error: División por cero no permitida.", output)
+
 
 if __name__ == "__main__":
     unittest.main()
